@@ -153,7 +153,7 @@ public class ArrayOperations {
 			
 			int count=0;
 						
-			//int[] arr3 = mergeArray(arr1, arr2);
+			int[] arr3 = mergeArray(arr1, arr2);
 			for(int i=0; i<arr1.length;i++) {
 				for(int j=i+1;j<arr2.length;j++) {
 					if(arr1[i]==arr2[j]) {
@@ -168,10 +168,77 @@ public class ArrayOperations {
 			
 			
 		}
+		
+		private static int[] mergeArray(int[] arr1, int[] arr2) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 		public static void intersectionArray() {
 			
+			int arr[]= {23,36,96,78,55};
+			int arr2[]= {78,45,19,73,55};
+			System.out.println("Intersection of Two arrays:");
+			
+			for(int i=0;i<arr.length;i++) {
+				
+				for( int j=0;j<arr2.length;j++) {
+					
+					if(arr[i]==arr2[j]) {
+						System.out.println(arr2[j]);
+					}
+				}
+			}	
 		}
 		   
+		public static void removeDuplicate() {
+			
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter the size of an array:");
+			int s = sc.nextInt();
+			
+			int[] arr = new int[s];
+			System.out.println("Enter the Elements:");
+			
+			  for(int i=0;i<s;i++) {
+				  
+				  arr[i]=sc.nextInt();
+			  }
+			  int temp[]= new int[s];
+			  int j=0;
+			  Arrays.sort(arr);
+			  
+			  for(int i=0;i<s-1;i++ )
+			  {
+				  if(arr[i]!=arr[i+1])
+					  temp[j++]=arr[i];
+			  }
+			  
+			  temp[j++]=arr[s-1];
+			  for(int k=0;k<j;k++)
+			  {
+				  System.out.println(temp[k]);
+		}
+			  }
+		
+		public static void duplicateElements() {
+			
+			int[] arr = new int[] {1,2,3,4,2,7,8,8,3};
+			System.out.println("Duplicate Elements in given array:");
+			for(int i=0;i<arr.length;i++) {
+				for(int j=i+1;j<arr.length;j++) {
+					if(arr[i]==arr[j]) {
+						  System.out.println(arr[j]);
+					}
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
 		
 			public static void main(String[] args) {
 				
@@ -185,8 +252,12 @@ public class ArrayOperations {
 				//mergeArray();
 				//zigZagMergeArray(arr1,arr2);
 				//System.out.println("max element is:"+maxElement());
-				//System.out.println("min element is:" +minElement());
-				unionArray(arr1,arr2);
+				//System.out.println("In element is:" +minElement());
+				//unionArray(arr1,arr2);
+				//intersectionArray();
+				//removeDuplicate();
+				duplicateElements();
+				
 			}
 		}
 
