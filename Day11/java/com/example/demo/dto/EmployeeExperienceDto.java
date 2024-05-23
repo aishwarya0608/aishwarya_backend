@@ -1,30 +1,30 @@
 package com.example.demo.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+	import lombok.AllArgsConstructor;
+	import lombok.Builder;
+	import lombok.Getter;
+	import lombok.NoArgsConstructor;
+	import lombok.Setter;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+	@Setter
+	@Getter
+	@NoArgsConstructor
+	@AllArgsConstructor
+	@Builder
 
 
-public class EmployeeExperienceDto {
+	public class EmployeeExperienceDto {
 
-	
-	private Integer id;
+		
+		private Integer id;
 
-	private String yearsOfExperience;
+		private String yearsOfExperience;
 
-	private String dateOfJoining;
+		private String dateOfJoining;
 
-	private String dateOfRelieving;
+		private String dateOfRelieving;
 
-	private String designation;
+		private String designation;
 
-	private String location;
-}
+		private String location;
+	}
